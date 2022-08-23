@@ -1,6 +1,3 @@
-// localStorage.setItem("lastname", "Smith");
-// localStorage.getItem("lastname");
-
 let input = document.querySelector(".input");
 let submit = document.querySelector(".add");
 let tasks = document.querySelector(".tasks");
@@ -27,13 +24,10 @@ submit.onclick = function () {
         div.onclick = function () {
         this.classList.add("done")
         }
-        myArr.push(div)
-        localStorage.setItem("tasks", myArr)
         div.appendChild(del)       
         del.onclick = function () {
             del.parentElement.remove()
         }
+        localStorage.setItem("tasks", myArr);
     }
 };
-
-//(tasks.children)
